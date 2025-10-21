@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
+<testng-results ignored="0" total="5" passed="0" failed="1" skipped="4">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-10-21T19:08:59 IST" name="Default suite" finished-at="2025-10-21T19:08:59 IST" duration-ms="123">
+  <suite started-at="2025-10-21T20:11:43 IST" name="Default suite" finished-at="2025-10-21T20:11:43 IST" duration-ms="151">
     <groups>
     </groups>
-    <test started-at="2025-10-21T19:08:59 IST" name="Default test" finished-at="2025-10-21T19:08:59 IST" duration-ms="123">
-      <class name="TestNGAssertions.Softassertions">
-        <test-method signature="test()[pri:0, instance:TestNGAssertions.Softassertions@441772e]" started-at="2025-10-21T19:08:59 IST" name="test" finished-at="2025-10-21T19:08:59 IST" duration-ms="36" status="FAIL">
+    <test started-at="2025-10-21T20:11:43 IST" name="Default test" finished-at="2025-10-21T20:11:43 IST" duration-ms="151">
+      <class name="TestNGDependancy.dependancyMethod">
+        <test-method signature="openapp()[pri:1, instance:TestNGDependancy.dependancyMethod@1d9b7cce]" started-at="2025-10-21T20:11:43 IST" name="openapp" finished-at="2025-10-21T20:11:43 IST" duration-ms="30" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[The following asserts failed:
-expected [false] but found [true]]]>
+              <![CDATA[expected [true] but found [false]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: The following asserts failed:
-expected [false] but found [true]
-at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)
-at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:30)
-at TestNGAssertions.Softassertions.test(Softassertions.java:23)
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1590)
+at org.testng.Assert.assertTrue(Assert.java:57)
+at org.testng.Assert.assertTrue(Assert.java:67)
+at TestNGDependancy.dependancyMethod.openapp(dependancyMethod.java:11)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 at java.base/java.lang.reflect.Method.invoke(Method.java:565)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -50,8 +50,146 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- test -->
-      </class> <!-- TestNGAssertions.Softassertions -->
+        </test-method> <!-- openapp -->
+        <test-method signature="login()[pri:2, instance:TestNGDependancy.dependancyMethod@1d9b7cce]" started-at="2025-10-21T20:11:43 IST" name="login" finished-at="2025-10-21T20:11:43 IST" depends-on-methods="TestNGDependancy.dependancyMethod.openapp" duration-ms="1" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method TestNGDependancy.dependancyMethod.login() on instance TestNGDependancy.dependancyMethod@1d9b7cce depends on not successfully finished methods 
+[TestNGDependancy.dependancyMethod.openapp() on instance TestNGDependancy.dependancyMethod@1d9b7cce]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method TestNGDependancy.dependancyMethod.login() on instance TestNGDependancy.dependancyMethod@1d9b7cce depends on not successfully finished methods 
+[TestNGDependancy.dependancyMethod.openapp() on instance TestNGDependancy.dependancyMethod@1d9b7cce]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method signature="Search()[pri:3, instance:TestNGDependancy.dependancyMethod@1d9b7cce]" started-at="2025-10-21T20:11:43 IST" name="Search" finished-at="2025-10-21T20:11:43 IST" depends-on-methods="TestNGDependancy.dependancyMethod.openapp, TestNGDependancy.dependancyMethod.login" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method TestNGDependancy.dependancyMethod.Search() on instance TestNGDependancy.dependancyMethod@1d9b7cce depends on not successfully finished methods 
+[TestNGDependancy.dependancyMethod.openapp() on instance TestNGDependancy.dependancyMethod@1d9b7cce
+TestNGDependancy.dependancyMethod.login() on instance TestNGDependancy.dependancyMethod@1d9b7cce]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method TestNGDependancy.dependancyMethod.Search() on instance TestNGDependancy.dependancyMethod@1d9b7cce depends on not successfully finished methods 
+[TestNGDependancy.dependancyMethod.openapp() on instance TestNGDependancy.dependancyMethod@1d9b7cce
+TestNGDependancy.dependancyMethod.login() on instance TestNGDependancy.dependancyMethod@1d9b7cce]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Search -->
+        <test-method signature="advancedSwrach()[pri:4, instance:TestNGDependancy.dependancyMethod@1d9b7cce]" started-at="2025-10-21T20:11:43 IST" name="advancedSwrach" finished-at="2025-10-21T20:11:43 IST" depends-on-methods="TestNGDependancy.dependancyMethod.Search" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method TestNGDependancy.dependancyMethod.advancedSwrach() on instance TestNGDependancy.dependancyMethod@1d9b7cce depends on not successfully finished methods 
+[TestNGDependancy.dependancyMethod.Search() on instance TestNGDependancy.dependancyMethod@1d9b7cce]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method TestNGDependancy.dependancyMethod.advancedSwrach() on instance TestNGDependancy.dependancyMethod@1d9b7cce depends on not successfully finished methods 
+[TestNGDependancy.dependancyMethod.Search() on instance TestNGDependancy.dependancyMethod@1d9b7cce]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- advancedSwrach -->
+        <test-method signature="logout()[pri:5, instance:TestNGDependancy.dependancyMethod@1d9b7cce]" started-at="2025-10-21T20:11:43 IST" name="logout" finished-at="2025-10-21T20:11:43 IST" depends-on-methods="TestNGDependancy.dependancyMethod.login" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method TestNGDependancy.dependancyMethod.logout() on instance TestNGDependancy.dependancyMethod@1d9b7cce depends on not successfully finished methods 
+[TestNGDependancy.dependancyMethod.login() on instance TestNGDependancy.dependancyMethod@1d9b7cce]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method TestNGDependancy.dependancyMethod.logout() on instance TestNGDependancy.dependancyMethod@1d9b7cce depends on not successfully finished methods 
+[TestNGDependancy.dependancyMethod.login() on instance TestNGDependancy.dependancyMethod@1d9b7cce]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logout -->
+      </class> <!-- TestNGDependancy.dependancyMethod -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
