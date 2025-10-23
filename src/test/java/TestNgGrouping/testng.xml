@@ -5,14 +5,13 @@
   <groups>
   <run>
   <include name="functional">
-
   </include>
   </run>
   </groups>
     <classes>
-      <class name="TestNgGrouping.loginTest"/>
-      <class name="TestNgGrouping.signupTest"/>
-      <class name="TestNgGrouping.paymentTest"/>
+      <class name="TestNGGrouping.loginTest"/>
+      <class name="TestNGGrouping.signupTest"/>
+      <class name="TestNGGrouping.paymentTest"/>
     </classes>
   </test> <!-- GroupingTest -->
 </suite> <!-- Suite -->
